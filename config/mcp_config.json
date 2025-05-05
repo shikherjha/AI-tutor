@@ -1,0 +1,46 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "duckduckgo-search": {
+      "command": "npx",
+      "args": ["-y", "duckduckgo-mcp-server"],
+      "config": {
+        "rateLimitPerMinute": 5
+      }
+    },
+    "wikipedia-search": {
+      "command": "npx",
+      "args": ["-y", "wikipedia-mcp-server"]
+    },
+    "wolfram-alpha": {
+      "command": "npx",
+      "args": ["-y", "wolfram-alpha-mcp-server"],
+      "env": {
+        "WOLFRAM_ALPHA_APPID": "${WOLFRAM_ALPHA_APPID}"
+      }
+    },
+    "arxiv": {
+      "command": "npx",
+      "args": ["-y", "arxiv-mcp-server"]
+    },
+    "tavily": {
+      "command": "npx",
+      "args": ["-y", "tavily-mcp-server"],
+      "env": {
+        "TAVILY_API_KEY": "${TAVILY_API_KEY}"
+      },
+      "config": {
+        "search_depth": "advanced",
+        "include_domains": ["edu", "org", "gov"],
+        "max_results": 8
+      }
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "sequential-thinking-mcp-server"]
+    }
+  }
+}
